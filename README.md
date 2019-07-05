@@ -32,3 +32,5 @@ of those words. Change the filter function so that this works correctly.
   - TESTS
   - To implement Angular Material and the prebuilt Table component. (Which includes paging and sorting)
   - Implementing Styles.
+  - Documenting the code
+  - Many more, I'm sure.
