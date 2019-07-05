@@ -1,0 +1,30 @@
+<div>
+  Search:
+  <input type="text" class="form-control" [formControl]="searchField">
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Cool column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entry of filteredData|slice:((page - 1) * pageSize):(page * pageSize); trackBy: trackByFn">
+      <th>{{ entry.name }}</th>
+      <td>{{ entry.description }}</td>
+      <td>{{ entry.status }}</td>
+      <td>
+        <!-- I'm a very important column for whatever reasons, so please do not remove me -->
+        <div *ngFor="let x of emptyArray"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<input type="button" value="prev page" (click)="prevPage()" />
+{{ page }} of {{ maxPages }}
+<input type="button" value="next page" (click)="nextPage()" />
