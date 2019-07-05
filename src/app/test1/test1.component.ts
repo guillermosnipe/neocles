@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import * as randomWords from 'random-words';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { template } from '@angular/core/src/render3';
 
 export interface IEntry {
   name: string;
