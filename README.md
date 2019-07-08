@@ -19,6 +19,8 @@ of those words. Change the filter function so that this works correctly.
 
 1. The rendering is much better now, this is because I'm treating the input value as an observable and I've applied some RXJS operators to debounce the calls to the function, and because some other operators like distinctUntilChanged are being used when piping the search term. The ngFor is making use of trackby, which enhances the rendering time.
 
+** Important!: ** After sending the exam, today (Monday morning), I've implemented a significant improvement to the filterResults method. Even when there are many things that can be still done, I wouldn't like to skip this one.
+
 2. I've converted the input into a FormControl, but I didn't find any good reason to convert the data array into an observable, and render it with the asyncpipe.
 
 3. A pager has been implemented, its implementation is really basic. I've considered only the initial case (Max pages that can be created = 10000 / page size), more cases need to be considered, such as the total amount of pages that can be generated when displaying search results.

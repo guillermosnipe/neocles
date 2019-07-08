@@ -66,7 +66,7 @@ export class Test1Component implements OnInit {
 
   filterResults(filter) {
     return this.data.filter(entry => {
-      return entry.name.indexOf(filter) !== -1 || entry.description.indexOf(filter) !== -1 || entry.status.indexOf(filter) !== -1;
+      return Object.values(entry).some(key => key.indexOf(filter) !== -1);
     });
   }
 
