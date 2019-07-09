@@ -30,8 +30,9 @@ of those words. Change the filter function so that this works correctly.
 5. Improvements: Many, but because of the time limit, I was not able to introduce them.
 
   - Moving the data generation routine to a service.
-  - Better code structuring
+  - Better code structuring (for instance, removing all the unnecessary code from the ngFor statement)
   - TESTS
+  - To create the pager directive instead of implementing it in the component.
   - To implement Angular Material and the prebuilt Table component. (Which includes paging and sorting)
   - Implementing Styles.
   - Documenting the code
