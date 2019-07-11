@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import * as randomWords from 'random-words';
-import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 export interface IEntry {
@@ -10,11 +10,11 @@ export interface IEntry {
 }
 
 @Component({
-  selector: 'app-test1',
-  templateUrl: './test1.component.html',
-  styleUrls: ['./test1.component.css']
+  selector: 'ne-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css']
 })
-export class Test1Component implements OnInit {
+export class TableComponent implements OnInit {
 
   data: IEntry[];
   page = 1;
