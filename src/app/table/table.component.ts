@@ -24,16 +24,34 @@ export class TableComponent implements OnInit {
   data: IEntry[] = [];
 
   ngOnInit() {
-    // Initial Load
     this.fetchedData
     .pipe(
       take(this.options.pageSize)
+    )
+    .subscribe( row => this.data.push( row ));
+    // this.loadData(this.fetchedData, this.data, this.options.pageSize);
+  }
+
+  loadData(data$, renderedDataArray, pageSize) {
+    data$
+    .pipe(
+      take(pageSize)
     )
     .subscribe( row => this.data.push( row ));
   }
 
   getPagedData(data) {
     this.data = data;
+  }
+
+  getFilteredData(data) {
+    console.log('getFilteredData');
+    this.fetchedData = data;
+    this.loadData(data, this.data, this.options.pageSize);
+  }
+
+  resetData() {
+    this.fetchedData = this.dataService.data;
   }
 
   // helpers

@@ -3,11 +3,11 @@ import { Observable, from, of } from 'rxjs';
 import * as randomWords from 'random-words';
 
 export interface IEntry {
-  id: number;
+  id: string;
   name: string;
   description: string;
   status: string;
-  coolColumn: '';
+  coolColumn: string;
 }
 
 @Injectable({
@@ -22,7 +22,7 @@ export class TableService {
 
     for (let i = 0; i < _elementsToCreate; i++) {
       _data.push({
-        id: i,
+        id: i.toString(),
         name: randomWords({exactly: 3, join: ' '}),
         description: randomWords({exactly: 100, join: ' '}),
         status: ['new', 'submitted', 'failed'][Math.floor(Math.random() * 3)],

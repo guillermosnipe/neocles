@@ -1,4 +1,8 @@
-<ne-search></ne-search>
+<ne-search
+  [collection]=fetchedData
+  (filteredDataCollection)='getFilteredData($event)'
+  (filterIsEmpty)='resetData()'>
+</ne-search>
 
 <table class='table table-striped'>
   <thead>
