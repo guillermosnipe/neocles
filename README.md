@@ -14,6 +14,11 @@ of those words. Change the filter function so that this works correctly.
 
 5. Apply any other improvements you can think of.
 
+## Branches
+
+Master: The exercise that I sent last week.
+fix/test-improvements: The improved exercise.
+
 
 ## Notes
 
