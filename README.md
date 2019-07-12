@@ -16,8 +16,9 @@ of those words. Change the filter function so that this works correctly.
 
 ## Branches
 
-Master: The exercise that I sent last week.
-fix/test-improvements: The improved exercise.
+**Master**: The exercise that I sent last week.  
+
+**fix/test-improvements**: The improved exercise.
 
 
 ## Notes
